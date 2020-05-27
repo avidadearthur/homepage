@@ -2,6 +2,14 @@
 /* Use at least 5 differt CSS selectors
 within  which you must include at least 5 different CSS properties*/
 
-body{
-    color: blue;
+/* When Homepage is fully loaded  */
+.page-container {
+    position: relative;
+    background: #f8f8f8;
+}
+
+.app {
+    z-index:1;
+    position: relative;
+    height:100%;
 }
