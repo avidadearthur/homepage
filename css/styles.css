@@ -3,9 +3,14 @@
 within  which you must include at least 5 different CSS properties*/
 
 /* When Homepage is fully loaded  */
-.page-container {
-    position: relative;
-    background: #f8f8f8;
+body {
+    background: white;
+}
+
+header{
+    z-index:2;
+    height:7.5vh;
+    width:100vw;
 }
 
 .app {
@@ -13,3 +18,156 @@ within  which you must include at least 5 different CSS properties*/
     position: relative;
     height:100%;
 }
+
+.page-container {
+    position: relative;
+    background: #f8f8f8;
+
+    height:85vh;
+    width:95vw;
+
+    margin:0vh 2.5vw 7.5vh 2.5vw;
+}
+
+/*Menu sideNav*/
+
+.menubtn-container #menu-txt{
+
+    z-index:2;
+    position: fixed;
+    float:left;
+    top: 45vh;
+
+    color:black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+
+
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 50%  55%;
+
+    cursor:pointer
+}
+
+/*For the mobile size*/
+#menu-toggle{
+    position:relative;
+    float:right;
+    margin-top: -3.5vh;
+    margin-right: 5vw;
+    font-size: 1.5rem;
+}
+
+
+.sidenav {
+    z-index: 4;
+
+    height:87vh;
+    width: 0;
+    position: fixed;
+
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.menu-container ul{
+    margin:30vh 30vw;
+    list-style-type: none;
+}
+
+.sidenav a {
+    text-decoration: none;
+    text-align:center;
+    margin:auto;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+
+
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 8.5vh;
+    right: 10vw;
+    font-size: 2.5rem;
+}
+
+
+/*Menu sideNav END*/
+
+/*Media Queries*/
+
+/*Mobile screen*/
+@media only screen and (max-width: 768px){
+    .padding {
+        padding:5vh 10vw;
+    }
+
+    header {
+        position:fixed;
+        height:8.5vh;
+        background: #f8f8f8;
+        transition:0.5s;
+    }
+
+    .page-container {
+        height:100vh;
+        width:100vw;
+
+        margin:0;
+        transition:0.5s;
+    }
+
+    .sidenav {
+        z-index: 4;
+
+        height:100vh;
+        width: 0;
+        position: fixed;
+
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+}
+
+.menubtn-mobile-container #menu-txt{
+
+    z-index:2;
+    position: relative;
+    margin:auto;
+    float:right;
+
+    color:black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+
+    cursor:pointer
+}
+
+/*Media Queries END*/
+
+/*Remove the scrollbar from Chrome, Safari, Edge and IE*/
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+* {
+  -ms-overflow-style: none !important;
+}
+
+/*Remove the scrollbar from Chrome, Safari, Edge and IE END*/
