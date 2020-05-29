@@ -5,7 +5,7 @@ within  which you must include at least 5 different CSS properties*/
 /* When Homepage is fully loaded  */
 body {
     background: white;
-    height:2000px;
+    height:200vh;
 }
 
 header{
@@ -46,7 +46,7 @@ main{
     left:-1vw;
 
     color:black;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 0.5em;
@@ -81,26 +81,29 @@ main{
 }
 
 .menu-container ul{
-    margin:30vh 30vw;
+    margin:30vh ;
     list-style-type: none;
+
+    border-left:solid;
+    border-color: #C70039;
+    border-width:10px;
 }
 
 .sidenav a {
     text-decoration: none;
-    text-align:center;
-    margin:auto;
-    font-size: 1.2rem;
+    text-align:left;
+    font-size: 3rem;
     text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.3em;
+    font-weight: 900;
+    letter-spacing: 0.2em;
 
 
-    color: #818181;
+    color: black;
     display: block;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: gray;
 }
 
 .sidenav .closebtn {
@@ -132,7 +135,7 @@ div #hello{
 #hello h1{
     /*add style?*/
     position:absolute;
-    margin: 21vh 0vw 21vh 5vw;
+    margin: 21vh 2vw 21vh 4vw;
     font-size: 4rem;
     text-transform: uppercase;
     font-weight: 900;
@@ -150,7 +153,13 @@ div #preambule{
 }
 
 #preambule p{
-    display: none;
+    display:none;
+    position:absolute;
+    text-align:left;
+    font-size: 2rem;
+    font-weight: 700;
+    margin:35vh 50vw 5vh 10vw;
+
 }
 
 /*Intro Section END*/
@@ -180,15 +189,15 @@ div #preambule{
     }
 
     .sidenav {
-        z-index: 4;
-
         height:100vh;
-        width: 0;
-        position: fixed;
+    }
 
-        background-color: white;
-        overflow-x: hidden;
-        transition: 0.5s;
+    .sidenav a {
+        font-size: 2rem;
+    }
+
+    .menu-container ul{
+        margin: 30vh 7vw;
     }
 
     #intro{
@@ -205,6 +214,11 @@ div #preambule{
         width:0%;
         height:100vh;
     }
+
+    #preambule p{
+        font-size: 2rem;
+        margin: 15vh 10vw 5vh 5vw;
+    }
 }
 
 .menubtn-mobile-container #menu-txt{
@@ -216,9 +230,7 @@ div #preambule{
 
     color:black;
     font-size: 1rem;
-    text-transform: uppercase;
     font-weight: 900;
-    letter-spacing: 0.5em;
 
     cursor:pointer
 }

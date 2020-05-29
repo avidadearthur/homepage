@@ -6,7 +6,7 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
 
-        <title>My Webpage</title>
+        <title>Homepage</title>
         <!--The webpage should contain at least four different .html pages, at least one of which is index.html (the main page of your website),
         and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
         Use at least ten (10) distinct HTML tags besides <html>, <head>, <body>, and <title>.
@@ -49,10 +49,9 @@
                         <!--Anchors to the other pages-->
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                         <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Clients</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">About.</a></li>
+                            <li><a href="#">Services.</a></li>
+                            <li><a href="#">Contact.</a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,9 +63,8 @@
                         <!--Preambule text with some icon-->
                         <div id="preambule">
                             <!--Write some preambule-->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Assumenda, qui, cum! Q dolores aliquid corporis molestiae rem.
-                            Non molestias, aliquam!</p>
+                            <p id="preambule-txt"><span style="color:white; border-bottom:solid; border-color:yellow;">Welcome to CS50x web.</span><br>
+                            This is the homepage problem set! Enjoy the power of HTML, Js, CSS and a bit of Bootstrap!</p>
                         </div>
                         <!--Hello CS50 Web section-->
                         <!--Moves to the roght on scroll-->
@@ -101,6 +99,7 @@
             else{
                 document.getElementById("menu").style.width = "80%";
                 document.getElementById("menu-txt").style.display = "none";
+                document.getElementById("hello").style.color = "yellow";
             }
         }
 
@@ -108,19 +107,22 @@
             document.getElementById("menu").style.width = "0%";
             document.getElementById("menu-txt").style.display = "block";
             document.getElementById("menu-toggle").style.display = "block";
+            document.getElementById("hello").style.color = "black";
             if (window.screen.width <= 768) {
                 document.getElementById("header").style.background = 'transparent';
             }
         }
         // Menu Nav functions //
 
-        // Display preambule functions //
+        // Change div width & display preambule functions //
         var expandDiv = document.getElementById("preambule");
         var shrinkDiv = document.getElementById("hello");
 
         var speed = 5;
 
         function expanding() {
+            document.getElementById("preambule-txt").style.display = "none"// hidde preambule text
+
             var scrolltop = window.pageYOffset; // get number of pixels document has scrolled vertically
             var scrollAndSpeed = (scrolltop / speed);
             //Expand using transform
@@ -130,20 +132,25 @@
             if (window.screen.width <= 768) {
                 expandDiv.style.width = Math.min(Math.max(scrollAndSpeed, 0), 100) + "%";
                 shrinkDiv.style.width = 100 - Math.min(Math.max(scrollAndSpeed, 0), 100) + "%";
+                if (expandDiv.style.width > "80%" || expandDiv.style.width == "100%" ){
+                    document.getElementById("preambule-txt").style.display = "block"; // show preambule text
+                }
             }
             else{
                 expandDiv.style.width = Math.min(Math.max(scrollAndSpeed, 20), 70) + "%";
                 shrinkDiv.style.width = 100 - Math.min(Math.max(scrollAndSpeed, 20), 70) + "%";
+                if (expandDiv.style.width > "40%"){
+                    document.getElementById("preambule-txt").style.display = "block"; // show preambule text
+                }
 
             }
-            //Allow page to scroll downs
         }
-
-
 
         window.addEventListener('scroll', function() { // on page scroll
             requestAnimationFrame(expanding); // call parallaxing()
         }, false);
-        // Display preambule functions //
+
+        //Change div width & display preambule functions //
+
     </script>
 </html>
