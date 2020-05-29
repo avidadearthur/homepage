@@ -59,6 +59,25 @@
 
                 <!--Intro page hiding preambule-->
                 <main class="page">
+                    <!--Intro page hiding preambule-->
+                    <section id="intro">
+                        <!--Preambule text with some icon-->
+                        <div id="preambule">
+                            <!--Write some preambule-->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Assumenda, qui, cum! Q dolores aliquid corporis molestiae rem.
+                            Non molestias, aliquam!</p>
+                        </div>
+                        <!--Hello CS50 Web section-->
+                        <!--Moves to the roght on scroll-->
+                        <div id="hello">
+                            <!--Write some heading-->
+                            <h1>Lorem<br>
+                            ipsum<br>
+                            dolor sit<br>
+                            amet.</h1>
+                        </div>
+                    </section>
 
                 </main>
 
@@ -72,11 +91,12 @@
     </body>
     <!--Move to separate file later-->
     <script>
+        // Menu Nav functions //
         function openNav() {
             if (window.screen.width <= 768) {
                 document.getElementById("menu").style.width = "100%";
                 document.getElementById("menu-toggle").style.display = "none";
-                document.getElementById("header").style.background = 'white';
+                document.getElementById("header").style.background = 'transparent';
             }
             else{
                 document.getElementById("menu").style.width = "80%";
@@ -89,8 +109,41 @@
             document.getElementById("menu-txt").style.display = "block";
             document.getElementById("menu-toggle").style.display = "block";
             if (window.screen.width <= 768) {
-                document.getElementById("header").style.background = '#f8f8f8';
+                document.getElementById("header").style.background = 'transparent';
             }
         }
+        // Menu Nav functions //
+
+        // Display preambule functions //
+        var expandDiv = document.getElementById("preambule");
+        var shrinkDiv = document.getElementById("hello");
+
+        var speed = 5;
+
+        function expanding() {
+            var scrolltop = window.pageYOffset; // get number of pixels document has scrolled vertically
+            var scrollAndSpeed = (scrolltop / speed);
+            //Expand using transform
+            //expandDiv.style.transform = "scalex( " + Math.min(Math.max(scrollAndSpeed, 1), 10) + ")";
+
+            //Or using width
+            if (window.screen.width <= 768) {
+                expandDiv.style.width = Math.min(Math.max(scrollAndSpeed, 0), 100) + "%";
+                shrinkDiv.style.width = 100 - Math.min(Math.max(scrollAndSpeed, 0), 100) + "%";
+            }
+            else{
+                expandDiv.style.width = Math.min(Math.max(scrollAndSpeed, 20), 70) + "%";
+                shrinkDiv.style.width = 100 - Math.min(Math.max(scrollAndSpeed, 20), 70) + "%";
+
+            }
+            //Allow page to scroll downs
+        }
+
+
+
+        window.addEventListener('scroll', function() { // on page scroll
+            requestAnimationFrame(expanding); // call parallaxing()
+        }, false);
+        // Display preambule functions //
     </script>
 </html>

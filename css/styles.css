@@ -5,12 +5,15 @@ within  which you must include at least 5 different CSS properties*/
 /* When Homepage is fully loaded  */
 body {
     background: white;
+    height:2000px;
 }
 
 header{
     z-index:2;
+    position: fixed;
     height:7.5vh;
     width:100vw;
+    background: white;
 }
 
 .app {
@@ -19,14 +22,17 @@ header{
     height:100%;
 }
 
+main{
+    height:100%;
+}
+
 .page-container {
-    position: relative;
+    /*position: relative;*/
     background: #f8f8f8;
 
     height:85vh;
-    width:95vw;
-
-    margin:0vh 2.5vw 7.5vh 2.5vw;
+    width: 92.5vw;
+    margin: 0vh 3.75vw 7.5vh 3.75vw;
 }
 
 /*Menu sideNav*/
@@ -37,6 +43,7 @@ header{
     position: fixed;
     float:left;
     top: 45vh;
+    left:-1vw;
 
     color:black;
     font-size: 1rem;
@@ -62,9 +69,9 @@ header{
 
 
 .sidenav {
-    z-index: 4;
+    z-index: 6;
 
-    height:87vh;
+    height:100vh;
     width: 0;
     position: fixed;
 
@@ -106,6 +113,50 @@ header{
 
 /*Menu sideNav END*/
 
+/*Intro Section*/
+#intro{
+    height:85vh;
+    width: 92.5vw;
+    position:fixed;
+}
+
+div #hello{
+    z-index:4;
+    float:right;
+    /*width to be dinamically changed on scroll down event*/
+    background:yellow;
+    width:80%;
+    height:85vh;
+}
+
+#hello h1{
+    /*add style?*/
+    position:absolute;
+    margin: 21vh 0vw 21vh 5vw;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/*section.preambule*/
+div #preambule{
+    z-index:5;
+    background: #C70039;
+    float:left;
+
+    /*width to be dinamically changed on scroll down event*/
+    width:20%;
+    height:85vh;
+}
+
+#preambule p{
+    display: none;
+}
+
+/*Intro Section END*/
+
+
+
 /*Media Queries*/
 
 /*Mobile screen*/
@@ -115,9 +166,8 @@ header{
     }
 
     header {
-        position:fixed;
         height:8.5vh;
-        background: #f8f8f8;
+        background: transparent;
         transition:0.5s;
     }
 
@@ -140,6 +190,21 @@ header{
         overflow-x: hidden;
         transition: 0.5s;
     }
+
+    #intro{
+        height:100vh;
+        width: 100vw;
+        position:fixed;
+    }
+
+    div #hello{
+        width:100%;
+        height:100vh;
+    }
+    div #preambule{
+        width:0%;
+        height:100vh;
+    }
 }
 
 .menubtn-mobile-container #menu-txt{
@@ -160,7 +225,7 @@ header{
 
 /*Media Queries END*/
 
-/*Remove the scrollbar from Chrome, Safari, Edge and IE*/
+/*Remove the scrollbar from Chrome, Safari, Edge and IE
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
