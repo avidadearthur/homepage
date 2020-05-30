@@ -3,7 +3,7 @@
 within  which you must include at least 5 different CSS properties*/
 
 /* When Homepage is fully loaded  */
-body {
+.page-home {
     background: white;
     height:200vh;
 }
