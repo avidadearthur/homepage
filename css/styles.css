@@ -8,11 +8,12 @@ body {
     height:200vh;
 }
 
-header{
+header {
     z-index:2;
     position: fixed;
-    height:8vh;
+    height:10vh;
     width:100vw;
+    padding-bottom: 1vh;
     background: white;
 }
 
@@ -22,7 +23,7 @@ header{
     height:100%;
 }
 
-main{
+main {
     height:100%;
 }
 
@@ -35,7 +36,7 @@ main{
 }
 
 /*Nav brand*/
-.navbar-brand .txt{
+.navbar-brand .txt {
     display: inline-block;
     position: absolute;
     margin-top: -1vh;
@@ -48,7 +49,7 @@ main{
 }
 
 /*Menu sideNav*/
-.menubtn-container #menu-txt{
+.menubtn-container #menu-txt {
 
     z-index:2;
     position: fixed;
@@ -70,7 +71,7 @@ main{
 }
 
 /*For the mobile size*/
-#menu-toggle{
+#menu-toggle {
     position:relative;
     float:right;
     margin-top: -3.5vh;
@@ -91,7 +92,7 @@ main{
     transition: 0.5s;
 }
 
-.menu-container ul{
+.menu-container ul {
     margin:30vh ;
     list-style-type: none;
 
@@ -128,13 +129,13 @@ main{
 /*Menu sideNav END*/
 
 /*Intro Section*/
-#intro{
+#intro {
     height:90vh;
     width: 92.5vw;
     position:fixed;
 }
 
-div #hello{
+div #hello {
     z-index:4;
     float:right;
     /*width to be dinamically changed on scroll down event*/
@@ -143,7 +144,7 @@ div #hello{
     height:90vh;
 }
 
-#hello h1{
+#hello h1 {
     /*add style?*/
     position:absolute;
     margin: 21vh 2vw 21vh 4vw;
@@ -153,7 +154,7 @@ div #hello{
 }
 
 /*section.preambule*/
-div #preambule{
+div #preambule {
     z-index:5;
     background: #C70039;
     float:left;
@@ -163,7 +164,7 @@ div #preambule{
     height:90vh;
 }
 
-#preambule p{
+#preambule p {
     display:none;
     position:absolute;
     text-align:left;
@@ -180,12 +181,13 @@ div #preambule{
 /*Media Queries*/
 
 /*Mobile screen*/
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
     .padding {
         padding:5vh 10vw;
     }
 
     header {
+        padding-top: 1vh;
         height:8.5vh;
         background: transparent;
         transition:0.5s;
@@ -207,7 +209,7 @@ div #preambule{
         font-size: 2rem;
     }
 
-    .menu-container ul{
+    .menu-container ul {
         margin: 30vh 7vw;
         padding-left: 7px;
     }
