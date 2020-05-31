@@ -2,7 +2,7 @@
 /* Use at least 5 differt CSS selectors
 within  which you must include at least 5 different CSS properties*/
 
-/* When Homepage is fully loaded  */
+/* When index.html is fully loaded  */
 .page-home {
     background: white;
     height:200vh;
@@ -177,6 +177,86 @@ div #preambule {
 /*Intro Section END*/
 
 
+/* When about.html is fully loaded  */
+.padding {
+    width:100%;
+    position:relative;
+    padding:40px 40px;
+}
+
+.about-container{
+    margin: 0vh 3.75vw 7.5vh 3.75vw;
+    position: relative;
+    background: #f8f8f8;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    height:90vh;
+    width: 92.5vw;
+}
+
+/*first image*/
+#intro-about {
+    height:90vh;
+    background-image:url(img/cs50lecture.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+}
+
+.welcome-container section {
+    width:100%;
+    height:100%;
+    background: #f8f8f8;
+    float:left;
+}
+
+.welcome-container h2 {
+    z-index:5;
+    padding-left:1vw;
+
+    font-size: 2.5rem;
+    font-weight: 900;
+
+    border-left:solid;
+    border-color: #C70039;
+    border-width:10px;
+}
+
+.welcome-container p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-top: 1.3rem;
+
+}
+
+.content-container {
+    background-color: #C70039;
+    margin:5vh 2vw 5vh 2vw;
+}
+
+.content-container ul{
+    color:#f8f8f8;
+    margin:auto;
+    padding: 40px 30px;
+    text-align:left;
+    list-style-type: none;
+}
+
+.content-container li {
+    font-size: 1.2rem;
+    margin-bottom: 0.9rem;
+    padding-left: 4px;
+    border-left:solid;
+    border-color: white;
+    border-width:2px;
+}
+
+.content-container h4 {
+    color:white;
+    font-size:1.5rem;
+    margin-bottom:5px;
+}
 
 /*Media Queries*/
 
