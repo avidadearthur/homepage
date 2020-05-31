@@ -200,8 +200,7 @@ div #preambule {
     background-image:url(../img/cs50lecture.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center right;
-    background-size: cover;
+    background-position: left;
 }
 
 .welcome-container section {
