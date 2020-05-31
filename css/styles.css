@@ -197,7 +197,7 @@ div #preambule {
 /*first image*/
 #intro-about {
     height:90vh;
-    background-image:url(img/cs50lecture.jpg);
+    background-image:url(../img/cs50lecture.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center right;
