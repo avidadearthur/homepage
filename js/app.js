@@ -30,7 +30,7 @@ var shrinkDiv = document.getElementById("hello");
 var speed = 5;
 
 function expanding() {
-    document.getElementById("preambule-txt").style.display = "none"// hidde preambule text
+    document.getElementById("preambule-txt").style.display = "none";// hidde preambule text
 
     var scrolltop = window.pageYOffset; // get number of pixels document has scrolled vertically
     var scrollAndSpeed = (scrolltop / speed);
