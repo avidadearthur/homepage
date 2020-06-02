@@ -1,5 +1,4 @@
 # OS generated files #
-######################
 .DS_Store
 .DS_Store?
 ._*
@@ -7,4 +6,6 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# JSON files #
 .vscode/settings.json
