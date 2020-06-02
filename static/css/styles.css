@@ -1,0 +1,405 @@
+/* sytle sheet */
+/* Use at least 5 differt CSS selectors
+within  which you must include at least 5 different CSS properties*/
+
+/* When index.html is fully loaded  */
+.page-home {
+    background: white;
+    height:200vh;
+}
+
+header {
+    z-index:2;
+    position: fixed;
+    height:10vh;
+    width:100vw;
+    padding-bottom: 1vh;
+    background: white;
+}
+
+.app {
+    z-index:1;
+    position: relative;
+    height:100%;
+}
+
+main {
+    height:100%;
+}
+
+.page-container {
+    background: #f8f8f8;
+
+    height:90vh;
+    width: 92.5vw;
+    margin: 0vh 3.75vw 7.5vh 3.75vw;
+}
+
+/*Nav brand*/
+.navbar-brand .txt {
+    display: inline-block;
+    position: absolute;
+    margin-top: -1vh;
+    margin-left:5vw;
+
+    z-index: 4;
+    color:black;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+/*Menu sideNav*/
+.menubtn-container #menu-txt {
+
+    z-index:2;
+    position: fixed;
+    float:left;
+    top: 45vh;
+    left:-1vw;
+
+    color:black;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+
+
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 50%  55%;
+
+    cursor:pointer
+}
+
+/*For the mobile size*/
+#menu-toggle {
+    position:relative;
+    float:right;
+    margin-top: -3.5vh;
+    margin-right: 5vw;
+    font-size: 1.5rem;
+}
+
+
+.sidenav {
+    z-index: 6;
+
+    height:100vh;
+    width: 0;
+    position: fixed;
+
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.menu-container ul {
+    margin:30vh ;
+    list-style-type: none;
+
+    border-left:solid;
+    border-color: #C70039;
+    border-width:10px;
+}
+
+.sidenav a {
+    text-decoration: none;
+    text-align:left;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+
+
+    color: black;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: gray;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 8.5vh;
+    right: 10vw;
+    font-size: 2.5rem;
+}
+
+
+/*Menu sideNav END*/
+
+/*Intro Section*/
+#intro {
+    height:90vh;
+    width: 92.5vw;
+    position:fixed;
+}
+
+div #hello {
+    z-index:4;
+    float:right;
+    /*width to be dinamically changed on scroll down event*/
+    background:yellow;
+    width:80%;
+    height:90vh;
+}
+
+#hello h1 {
+    /*add style?*/
+    position:absolute;
+    margin: 21vh 2vw 21vh 4vw;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/*section.preambule*/
+div #preambule {
+    z-index:5;
+    background: #C70039;
+    float:left;
+
+    /*width to be dinamically changed on scroll down event*/
+    width:20%;
+    height:90vh;
+}
+
+#preambule p {
+    display:none;
+    position:absolute;
+    text-align:left;
+    font-size: 2rem;
+    font-weight: 700;
+    margin:25vh 50vw 5vh 10vw;
+
+}
+
+/*Intro Section END*/
+
+
+/* When about.html is fully loaded  */
+.padding {
+    width:100%;
+    position:relative;
+    padding:40px 40px;
+}
+
+.about-container{
+    margin: 0vh 3.75vw 7.5vh 3.75vw;
+    position: relative;
+    background: #f8f8f8;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    height:90vh;
+    width: 92.5vw;
+}
+
+/*first image*/
+#intro-about {
+    height:90vh;
+    background-image:url(../img/cs50lecture.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+}
+
+.welcome-container section {
+    width:100%;
+    height:100%;
+    background: #f8f8f8;
+    float:left;
+}
+
+.welcome-container h2 {
+    z-index:5;
+    padding-left:1vw;
+
+    font-size: 2.5rem;
+    font-weight: 900;
+
+    border-left:solid;
+    border-color: #C70039;
+    border-width:10px;
+}
+
+.welcome-container p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-top: 1.3rem;
+
+}
+
+.content-container {
+    background-color: #C70039;
+    margin:5vh 2vw 5vh 2vw;
+}
+
+.content-container ul{
+    color:#f8f8f8;
+    margin:auto;
+    padding: 40px 30px;
+    text-align:left;
+    list-style-type: none;
+}
+
+.content-container li {
+    font-size: 1.2rem;
+    margin-bottom: 0.9rem;
+    padding-left: 4px;
+    border-left:solid;
+    border-color: white;
+    border-width:2px;
+}
+
+.content-container h4 {
+    color:white;
+    font-size:1.5rem;
+    margin-bottom:5px;
+}
+
+/* When services.html is fully loaded  */
+
+ /*first image*/
+ #intro-services {
+    height:90vh;
+    background-image:url(../img/cs50staff.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+}
+
+#hello-services h1 {
+    /*add style?*/
+    color:white;
+    position:absolute;
+    margin: 21vh 2vw 21vh 4vw;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.services-container section {
+    width:100%;
+    height:100%;
+    background: #f8f8f8;
+    float:right;
+}
+
+.services-container h2 {
+    z-index:5;
+    padding-right:1vw;
+
+    font-size: 2.5rem;
+    font-weight: 900;
+
+    border-right:solid;
+    border-color: #C70039;
+    border-width:10px;
+    text-align: right;
+}
+
+.services-container p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-top: 1.3rem;
+    text-align: right;
+
+}
+
+/*Media Queries*/
+
+/*Mobile screen*/
+@media only screen and (max-width: 768px) {
+    .padding {
+        padding:5vh 10vw;
+    }
+
+    header {
+        padding-top: 1vh;
+        height:8.5vh;
+        background: transparent;
+        transition:0.5s;
+    }
+
+    .page-container {
+        height:100vh;
+        width:100vw;
+
+        margin:0;
+        transition:0.5s;
+    }
+
+    .about-container {
+        height:100vh;
+        width:100vw;
+
+        margin:0vh 0vw 0vh 0vw;
+        transition:0.5s;
+    }
+
+    .sidenav {
+        height:100vh;
+    }
+
+    .sidenav a {
+        font-size: 2rem;
+    }
+
+    .menu-container ul {
+        margin: 30vh 7vw;
+        padding-left: 7px;
+    }
+
+    #intro {
+        height:100vh;
+        width: 100vw;
+        position:fixed;
+    }
+
+    div #hello {
+        width:100%;
+        height:100vh;
+    }
+
+    #hello h1 {
+        margin: 15vh 2vw 21vh 4vw;
+    }
+
+    div #preambule{
+        width:0%;
+        height:100vh;
+    }
+
+    #preambule p{
+        font-size: 1.8rem;
+        margin: 10vh 5vw 5vh 5vw;
+    }
+}
+
+.menubtn-mobile-container #menu-txt{
+
+    z-index:2;
+    position: relative;
+    margin:auto;
+    float:right;
+
+    color:black;
+    font-size: 1rem;
+    font-weight: 900;
+
+    cursor:pointer
+}
+
+/*Media Queries END*/
+
+/*Remove the scrollbar from Chrome, Safari, Edge and IE
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+* {
+  -ms-overflow-style: none !important;
+}
+
+/*Remove the scrollbar from Chrome, Safari, Edge and IE END*/
