@@ -1,52 +1,5 @@
-<!DOCTYPE html>
-
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet">
-
-        <title>About</title>
-    </head>
-    <body class="page-about loaded">
-        <!--Display while loading and disapear after the page content is ready-->
-        <div id="loader">
-            <!--Include some loading icon-->
-        </div>
-        <!--Let's use a header tho help organize things better on diferent screen sizes-->
-        <header id="header">
-            <!--Some logo anchor tag (maybe)-->
-            <div class="navbar-brand">
-                <!--icon to be added-->
-                <a href="index.html"><span class="txt">Lorem Ipsum</span></a>
-            </div>
-            <div class="menubtn-container d-none d-md-block">
-                <!--icon to be added-->
-                <span id="menu-txt" onclick="openNav()">menu</span>
-            </div>
-            <div class="menubtn-mobile-container d-md-none d-block">
-                <!--icon to be added-->
-                <span id="menu-toggle" onclick="openNav()">&#9776</span>
-            </div>
-        </header>
-        <!--Actual page-->
-        <div class="app">
-            <!--main page div and container class-->
-            <div class="about-container">
-                <!--Left-side hidden menu content-->
-                <div id="menu" class="sidenav">
-                    <div class="menu-container">
-                        <!--Anchors to the other pages-->
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <ul>
-                            <li><a href="#">About.</a></li>
-                            <li><a href="services.html">Services.</a></li>
-                            <li><a href="contact.html">Contact.</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!--Intro page hiding preambule-->
-                <main class="page">
+{% extends "layout.html" %}
+{% block main %}
                     <!--Intro page hiding preambule-->
                     <section id="intro-about">
                         <!--First Web page article begning with a fluid picture-->
@@ -79,12 +32,4 @@
                             </div>
                         </div>
                     </div>
-                </main>
-            </div>
-        </div>
-        <!--Set some footer to show up when end of page is reached-->
-        <footer class="footer"></footer>
-    </body>
-    <!--Move to separate file later-->
-    <script src="js/app.js"></script>
-</html>
+{% endblock %}
